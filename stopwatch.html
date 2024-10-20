@@ -23,8 +23,11 @@
             const $buttonReset = $("#button-reset");
             const $timer = $("#timer");
             var interval;
-
             $timer.addClass("timer-background");
+            $buttonStart.addClass("button-style");
+            $buttonStop.addClass("button-style");
+            $buttonReset.addClass("button-style");
+
 
             $(".timer-background").css({
                 "background-color": "lightgray",
@@ -33,6 +36,16 @@
                 "padding": "10px",
                 "border-radius": "10px",
                 "text-align": "center"
+            });
+
+            $(".button-style").css({
+                "background-color": "blue",
+                "color": "white",
+                "border": "none",
+                "padding": "10px 20px",
+                "border-radius": "10px",
+                "font-size": "16px",
+                "margin": "5px"
             });
 
             $buttonStart.on("click", function () {
