@@ -25,7 +25,8 @@
             var interval;
 
             $timer.addClass("timer-background");
-            $("#timer").css({
+
+            $(".timer-background").css({
                 "background-color": "lightgray",
                 "font-size": "24px",
                 "color": "black",
@@ -35,15 +36,25 @@
             });
 
             $buttonStart.on("click", function () {
+                $(".timer-background").css({
+                    "background-color": "green",
+                });
                 clearInterval(interval);
                 interval = setInterval(startTimer, 10);
+
             });
 
             $buttonStop.on("click", function () {
-                clearInterval(interval);
+                $(".timer-background").css({
+                    "background-color": "red",
+                });
+                clearInterval(interval)
             });
 
             $buttonReset.on("click", function () {
+                $(".timer-background").css({
+                    "background-color": "lightgray",
+                });
                 clearInterval(interval);
                 tens = "00";
                 seconds = "00";
