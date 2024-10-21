@@ -35,7 +35,9 @@
                 "color": "black",
                 "padding": "10px",
                 "border-radius": "10px",
-                "text-align": "center"
+                "text-align": "center",
+                "border-width": "2px",
+                "border-color": "white"
             });
 
             $(".button-style").css({
@@ -46,6 +48,15 @@
                 "border-radius": "10px",
                 "font-size": "16px",
                 "margin": "5px"
+            });
+
+            $(".wrapper").css({
+                "background-image": "./background.jpg",
+                "border": "5px solid blac",
+                "border-radius": "20px",
+                "padding": "20px",
+                "width": "300px",
+                "text-align": "center"
             });
 
             $buttonStart.on("click", function () {
@@ -59,6 +70,7 @@
                 $(".timer-background").css("background-color", "red");
                 clearInterval(interval)
                 clearInterval(opacityInterval);
+                $(".timer-background").css("opacity", 1);
             });
 
             $buttonReset.on("click", function () {
