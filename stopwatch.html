@@ -27,6 +27,7 @@
             $buttonStart.addClass("button-style");
             $buttonStop.addClass("button-style");
             $buttonReset.addClass("button-style");
+            const $text = $("body").text();
 
 
             $(".timer-background").css({
@@ -51,12 +52,18 @@
             });
 
             $(".wrapper").css({
-                "background-image": "./background.jpg",
+                "background-image": "url('./background.jpg')",
                 "border": "5px solid blac",
                 "border-radius": "20px",
                 "padding": "20px",
                 "width": "300px",
                 "text-align": "center"
+            });
+
+            $text.css({
+                "background": "rgba(10, 10, 10, 0.5)",
+                "color": "white",
+                "width": "205px"
             });
 
             $buttonStart.on("click", function () {
@@ -119,9 +126,9 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper"">
         <h1>Stopwatch</h1>
-        <h2>Vanilla JavaScript Stopwatch</h2>
+        <h2>Halloween Stopwatch</h2>
         <p id="timer"><span id="seconds">00</span>:<span id="tens">00</span></p>
         <button id="button-start">Start</button>
         <button id="button-stop">Stop</button>
