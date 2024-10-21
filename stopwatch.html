@@ -49,25 +49,22 @@
             });
 
             $buttonStart.on("click", function () {
-                $(".timer-background").css({
-                    "background-color": "green",
-                });
+                $(".timer-background").css("background-color", "green");
                 clearInterval(interval);
                 interval = setInterval(startTimer, 10);
-
+                startOpacityAnimation();
             });
 
             $buttonStop.on("click", function () {
-                $(".timer-background").css({
-                    "background-color": "red",
-                });
+                $(".timer-background").css("background-color", "red");
                 clearInterval(interval)
+                clearInterval(opacityInterval);
             });
 
             $buttonReset.on("click", function () {
-                $(".timer-background").css({
-                    "background-color": "lightgray",
-                });
+                $(".timer-background").css("background-color", "lightgray");
+                clearInterval(opacityInterval);
+                $(".timer-background").css("opacity", 1);
                 clearInterval(interval);
                 tens = "00";
                 seconds = "00";
@@ -98,6 +95,14 @@
                 if (seconds > 9) {
                     $appendSeconds.html(seconds);
                 }
+            }
+
+            function startOpacityAnimation() {
+                opacityInterval = setInterval(function () {
+                    let opacity = $(".timer-background").css("opacity");
+                    let newOpacity = opacity == 1 ? 0.8 : 1;
+                    $(".timer-background").css("opacity", newOpacity);
+                }, 500);
             }
         });
     </script>
