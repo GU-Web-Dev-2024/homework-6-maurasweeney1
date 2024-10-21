@@ -52,7 +52,7 @@
                 $(".timer-background").css("background-color", "green");
                 clearInterval(interval);
                 interval = setInterval(startTimer, 10);
-                startOpacityAnimation();
+                opacityInterval = setInterval(opacitystartOpacityAnimation, 250);
             });
 
             $buttonStop.on("click", function () {
@@ -98,11 +98,9 @@
             }
 
             function startOpacityAnimation() {
-                opacityInterval = setInterval(function () {
-                    let opacity = $(".timer-background").css("opacity");
-                    let newOpacity = opacity == 1 ? 0.8 : 1;
-                    $(".timer-background").css("opacity", newOpacity);
-                }, 500);
+                let opacity = $(".timer-background").css("opacity");
+                let newOpacity = opacity == 1 ? 0.8 : 1;
+                $(".timer-background").css("opacity", newOpacity);
             }
         });
     </script>
