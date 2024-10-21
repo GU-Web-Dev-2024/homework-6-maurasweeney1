@@ -27,7 +27,7 @@
             $buttonStart.addClass("button-style");
             $buttonStop.addClass("button-style");
             $buttonReset.addClass("button-style");
-            const $text = $("body").text();
+            const $body = $("body");
 
 
             $(".timer-background").css({
@@ -42,7 +42,7 @@
             });
 
             $(".button-style").css({
-                "background-color": "blue",
+                "background-color": "purple",
                 "color": "white",
                 "border": "none",
                 "padding": "10px 20px",
@@ -56,14 +56,12 @@
                 "border": "5px solid blac",
                 "border-radius": "20px",
                 "padding": "20px",
-                "width": "300px",
-                "text-align": "center"
-            });
-
-            $text.css({
-                "background": "rgba(10, 10, 10, 0.5)",
+                "width": "250px",
+                "text-align": "center",
                 "color": "white",
-                "width": "205px"
+                "width": "180px", 
+                "background-size": "contain",
+                "text-align": "center"
             });
 
             $buttonStart.on("click", function () {
@@ -126,7 +124,7 @@
 </head>
 
 <body>
-    <div class="wrapper"">
+    <div class="wrapper">
         <h1>Stopwatch</h1>
         <h2>Halloween Stopwatch</h2>
         <p id="timer"><span id="seconds">00</span>:<span id="tens">00</span></p>
