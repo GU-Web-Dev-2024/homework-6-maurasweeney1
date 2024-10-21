@@ -52,7 +52,7 @@
                 $(".timer-background").css("background-color", "green");
                 clearInterval(interval);
                 interval = setInterval(startTimer, 10);
-                opacityInterval = setInterval(opacitystartOpacityAnimation, 250);
+                opacityInterval = setInterval(startOpacityAnimation, 250);
             });
 
             $buttonStop.on("click", function () {
